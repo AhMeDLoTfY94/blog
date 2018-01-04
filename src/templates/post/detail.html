@@ -1,0 +1,223 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>{{ object.title }}</title>
+    {% include "base/css.html" %}
+  </head>
+
+  <body>
+    <section>
+        <div class="container-fluid">
+            <div class="modal-header">
+                <div class="modal-header-logo">
+                     <img src='{% static "images/icons/logo.png" %}' alt="Ora">
+                </div>
+                            <div class="modal-header-control">
+                                <button class="btn-close au-btn au-btn-circle" type="button" data-dismiss="modal" aria-label="Close">
+                                    <i class="lnr lnr-cross"></i>
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="modal-body">
+                                    <article class="post-blog m-b-55">
+                                        <header class="post-header">
+                                            <h3 class="post-title">{{ object.title }}</h3>
+                                            <ul class="post-info h-list">
+                                                <li class="post-info-item">
+                                                    <span>
+                                                    	BY {{ object.author }}
+                                                    </span>
+                                                </li>
+                                                <li class="post-info-item">
+                                                    <span>{{ post.created|timesince }}</span>
+                                                </li>
+                                                <li class="post-info-item">
+                                                    <span>
+                                                        <a href="#">WEB DESIGN</a>
+                                                    </span>
+                                                </li>
+                                                <li class="post-info-item">
+                                                    <span>
+                                                        <a href="#">3 COMMENTS</a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </header>
+                                        <figure class="post-image">
+                                            <img class="img-fluid" src='{% static "images/blog-post-01.jpg" %}' alt="New Short Course: Lightweight Carousels With John">
+                                        </figure>
+                                        <div class="post-body">
+                                            <p class="post-paragraph">
+                                                {{ post.body }}
+                                            </p>
+                                            
+                                        </div>
+                                        <footer class="post-footer">
+                                            <div class="flex-bar align-items-start justify-content-lg-between m-b-40">
+                                                <ul class="post-tags h-list">
+                                                    <li class="post-tag-item">
+                                                        <a href="#">WEBSITE</a>
+                                                    </li>
+                                                    <li class="post-tag-item">
+                                                        <a href="#">ONEPAGE</a>
+                                                    </li>
+                                                    <li class="post-tag-item">
+                                                        <a href="#">PROFESIONAL</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="post-socials">
+                                                    <span class="post-social-label">SHARE</span>
+                                                    <ul class="h-list social-list">
+                                                        <li class="list-item" data-toggle="tooltip" title="Facebook">
+                                                            <a class="fa fa-facebook" href="#"></a>
+                                                        </li>
+                                                        <li class="list-item" data-toggle="tooltip" title="Twitter">
+                                                            <a class="fa fa-twitter" href="#"></a>
+                                                        </li>
+                                                        <li class="list-item" data-toggle="tooltip" title="Google Plus">
+                                                            <a class="fa fa-google-plus" href="#"></a>
+                                                        </li>
+                                                        <li class="list-item" data-toggle="tooltip" title="Linkedin">
+                                                            <a class="fa fa-linkedin" href="#"></a>
+                                                        </li>
+                                                        <li class="list-item" data-toggle="tooltip" title="Other">
+                                                            <a class="fa fa-plus" href="#"></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="post-author">
+                                                <div class="post-author-image">
+                                                    <a href="#">
+                                                        <img src="images/avatar-04.jpg" alt="John Doe">
+                                                    </a>
+                                                </div>
+                                                <div class="post-author-text">
+                                                    <a class="post-author-name" href="#">Tammy Ramos</a>
+                                                    <p class="post-author-paragraph">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin est nec ex vestibulum, vitae imperdiet justo malesuada. Donec quam augue, tempus sed tempor quis, rutrum sit amet
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </footer>
+                                    </article>
+                                    <div class="comment-pane m-b-45">
+                                        <div class="comment-pane-header">
+                                            <h3 class="comment-pane-title">3 COMMENTS</h3>
+                                        </div>
+                                        <div class="comment-pane-body">
+                                            <ul class="comment-pane-list">
+                                                <li class="list-item has-comment-children">
+                                                    <div class="comment-item">
+                                                        <div class="comment-author-avatar">
+                                                            <a href="#">
+                                                                <img src="images/avatar-05.jpg" alt="Arthur Reyes">
+                                                            </a>
+                                                        </div>
+                                                        <div class="comment-text">
+                                                            <p class="comment-paragraph">
+                                                                Nunc risus ex, tempus quis purus ac, tempor consequat ex. Vivamus sem magna, maximus at est id, maximus aliquet nunc. Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus.
+                                                            </p>
+                                                            <div class="comment-info">
+                                                                <a href="#">ARTHUR REYES &nbsp;</a>- JUNE 25, 2018 &nbsp;
+                                                                <a class="comment-reply" href="#">
+                                                                    <i class="fa fa-share"></i>REPLY</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="comment-pane-list-children">
+                                                        <li class="list-item">
+                                                            <div class="comment-item">
+                                                                <div class="comment-author-avatar">
+                                                                    <a href="#">
+                                                                        <img src="images/avatar-06.jpg" alt="Arthur Reyes">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="comment-text">
+                                                                    <p class="comment-paragraph">Nullam ipsum urna, dapibus sed justo sed, imperdiet malesuada commodo</p>
+                                                                    <div class="comment-info">
+                                                                        <a href="#">SHIRLEY CAMPBELL &nbsp;</a>- JUNE 25, 2018 &nbsp;
+                                                                        <a class="comment-reply" href="#">
+                                                                            <i class="fa fa-share"></i>REPLY</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item has-comment-children">
+                                                    <div class="comment-item">
+                                                        <div class="comment-author-avatar">
+                                                            <a href="#">
+                                                                <img src="images/avatar-07.jpg" alt="Arthur Reyes">
+                                                            </a>
+                                                        </div>
+                                                        <div class="comment-text">
+                                                            <p class="comment-paragraph">
+                                                                Donec sollicitudin nisi sed eros elementum, non vestibulum quam convallis. Curabitur bibendum magna at nisl hendrerit, et tempus metus facilisis. Praesent augue tellus, euismod id posuere eget, gravida id dolor
+                                                            </p>
+                                                            <div class="comment-info">
+                                                                <a href="#">SARA ELLIS &nbsp;</a>- JUNE 25, 2018 &nbsp;
+                                                                <a class="comment-reply" href="#">
+                                                                    <i class="fa fa-share"></i>REPLY</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="leave-comment-pane">
+                                        <div class="leave-comment-pane-header">
+                                            <h3 class="leave-comment-pane-title">LEAVE A COMMENT</h3>
+                                            <p class="leave-comment-pane-notify">You must be logged in to post a comment.</p>
+                                        </div>
+                                        <div class="leave-comment-pane-body">
+                                            <form class="leave-comment-pane-form">
+                                                <div class="form-group input-item">
+                                                    <textarea class="au-input" placeholder="COMMENT..."></textarea>
+                                                </div>
+                                                <div class="row no-gutters form-row">
+                                                    <div class="col-lg-4 input-item form-group">
+                                                        <input class="au-input" type="text" placeholder="NAME*">
+                                                    </div>
+                                                    <div class="col-lg-4 input-item form-group">
+                                                        <input class="au-input" type="text" placeholder="EMAIL*">
+                                                    </div>
+                                                    <div class="col-lg-4 input-item form-group">
+                                                        <input class="au-input" type="text" placeholder="WEBSITE*">
+                                                    </div>
+                                                </div>
+                                                <div class="input-submit">
+                                                    <input class="au-btn au-btn-pill" type="submit" value="POST COMMENT">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </section>
+{% include "base/js.html" %}
+
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a4a786424deb20011a72cbf&product=sticky-share-buttons"></script>
+</body>
+</html>
+
+
