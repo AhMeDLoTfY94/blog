@@ -60,7 +60,7 @@ pysmbc==1.0.13
 python-augeas==0.5.0
 python-dateutil==1.5
 python-dmidecode==3.12.2
-python-ldap==2.4.15
+python-ldap==3.4.0
 python-linux-procfs==0.4.9
 python-meh==0.25.2
 python-nmap==0.6.1
